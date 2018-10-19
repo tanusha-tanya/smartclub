@@ -4,7 +4,6 @@ var config = require('../config');
 gulp.task('watch', 
     ['copy:watch',
     
-    'swig:watch',
     'sprite:svg:watch',
     'svgo:watch',
     'list-pages:watch',

@@ -1,54 +1,60 @@
-# Smartclub readme
+#How to use
 
-Generated on 2018-10-16 using
-[generator-yeogurt@2.0.1](https://github.com/larsonjj/generator-yeogurt)
+Clone this repo and then in command line type:
 
-## Description
+* `npm install` or `yarn` - install all dependencies
+* `gulp` - run dev-server and let magic happen, or
+* `gulp build` - build project from sources
 
-This is an example readme file.
-Describe your site/app here.
+--
 
-## Technologies used
+## List of Gulp tasks
 
-JavaScript
-- [Browserify](http://browserify.org/)
-- [Node](https://nodejs.org/)
+To run separate task type in command line `gulp [task_name]`.
+Almost all tasks also have watch mode - `gulp [task_name]:watch`, but you don't need to use it directly.
 
-Styles
-- [Sass](http://sass-lang.com/) via ([node-sass](https://github.com/sass/node-sass))
+### Main tasks
+Task name          | Description                                                      
+:------------------|:----------------------------------
+`default`          | will start all tasks required by project in dev mode: initial build, watch files, run server with livereload
+`build:dev`        | build dev version of project (without code optimizations)
+`build`            | build production-ready project (with code optimizations)
 
-Markup
-- [Jade](http://jade-lang.com/)
+### Other tasks
+Task name          | Description                                                      
+:------------------|:----------------------------------
+`sass` 	         | compile .sass/.scss to .css. We also use [postcss](https://github.com/postcss/postcss) for [autoprefixer](https://github.com/postcss/autoprefixer) and [Lost](https://github.com/peterramsing/lost), so feel free to include other awesome postcss [plugins](https://github.com/postcss/postcss#plugins) when needed
+`webpack`          | compile .js sources into bundle file
+`copy`             | copy common files from `./src` path to `./build` path
+`swig`             | compile [swig](http://paularmstrong.github.io/swig/)  templates
+`nunjucks`         | compile Mozilla's awesome [nunjucks](https://mozilla.github.io/nunjucks/) templates
+`jade`             | compile [jade](http://jade-lang.com/) templates
+`svgo`             | optimize svg files with [svgo](https://github.com/svg/svgo)
+`iconfont`         | compile iconfonts from svg sources
+`sprite:svg`       | create svg symbol sprites ([css-tricks](https://css-tricks.com/svg-sprites-use-better-icon-fonts/))
+`sprite:png`       | create png sprites
+`server`           | run dev-server powered by [BrowserSync](https://www.browsersync.io/)
+`clean`            | remove `./build` folder
+`list-pages`       | create index file with links to all project pages
 
-Optimization
-- [Imagemin](https://github.com/imagemin/imagemin)
-- [Uglify](https://github.com/mishoo/UglifyJS)
-
-Server
-- [BrowserSync](http://www.browsersync.io/)
-
-Linting
-- [ESlint](http://eslint.org/)
-
-Automation
-- [Gulp](http://gulpjs.com)
-
-Code Management
-- [Editorconfig](http://editorconfig.org/)
-- [Git](https://git-scm.com/)
+_This is a full list of tasks, that we use in our projects, but not all of them should be available in current project. For example, we only use one template engine out of these three [`jade`, `nunjucks`, `swig`]. All available tasks are placed in a folder `./gulp/tasks` as separate *.js files. Usually, file name = task name._
 
 
-## Automated tasks
+## Flags
 
-This project uses [Gulp](http://gulpjs.com) to run automated tasks for development and production builds.
-The tasks are as follows:
+We have several useful flags.
 
-`gulp --production`: Same as `gulp serve --production` also run `gulp test` and  not boot up production server
+* `gulp --open` or `gulp server --open` - run dev server and then open preview in browser
+* `gulp --tunnel=[name]` or `gulp server --tunnel [name]` - runs dev server and allows you to easily share a web service on your local development machine (powered by [localtunnel.me](https://localtunnel.me/)). Your local site will be available at `[name].localtunnel.me`.
+* `gulp [task_name] --prod` or `gulp [task_name] --production` - run task in production mode. Some of the tasks (like, sass or js compilation) have additional settings for production mode (such as code minification), so with this flag you can force production mode. `gulp build` uses this mode by default.
 
-`gulp serve`: Compiles preprocessors and boots up development server
-`gulp serve --open`: Same as `gulp serve` but will also open up site/app in your default browser
-`gulp serve --production`: Same as `gulp serve` but will run all production tasks so you can view the site/app in it's final optimized form
+##Other
+You can also use [npm scripts](https://docs.npmjs.com/misc/scripts):
 
-`gulp test`: Lints all `*.js` file in the `source` folder using eslint
+* `npm run start` - same as `gulp default`.
+* `npm run build` - same as `gulp build`.
+* `npm run ghpages` to push only `./build` folder to **gh-pages** branch on github (very useful for previews).
+* `npm run lint` - linting javascript with **eslint**.
+* `npm run lint-fix` - fix as many issues as possible relatives to **eslint** settings.
 
-***Adding the `--debug` option to any gulp task displays extra debugging information (ex. data being loaded into your templates)***
+

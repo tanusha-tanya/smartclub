@@ -8,7 +8,6 @@ function build(cb) {
         'sprite:svg',
         'svgo',
         'sass',
-        'swig',
         'webpack',
         'copy',
         'list-pages',
