@@ -1,0 +1,46 @@
+.stimulation{
+   &__h2{
+        font: 46px MullerBold, sans-serif;
+        text-align: center;
+        margin: 0;
+        &::after{
+           content: " ";
+           display:block;
+           width: 130px;
+           height: 4px;
+           background: #a0a0a0; 
+           margin: 30px auto;
+           position: relative;
+        }
+   }
+    &__descript{
+      font: 30px MullerRegular, sans-serif;  
+      text-align: center;
+    }
+    &__items{
+        width: 50%;
+        margin-top: 70px;
+        padding: 0;
+    }
+    &__li{
+        margin-bottom: 32px;
+        font: 20px MullerRegular, sans-serif; 
+        list-style: none;
+        text-indent: 20px;
+        position: relative;
+        &:before{
+            content: "";
+            display:block;
+            width: 9px;
+            height: 9px;
+            background: #f1cb25;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            border-radius: 100%;
+        }
+        strong{
+            font: 20px MullerBold, sans-serif; 
+        }
+    }
+}

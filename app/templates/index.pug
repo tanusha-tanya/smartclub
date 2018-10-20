@@ -1,0 +1,25 @@
+extends _layouts/default
+
+block title
+  title Smartclub
+block header
+  include  _layouts/header/header
+block content
+  section.section.main__banner.main__banner-dark    
+    .container
+      .banner__text
+        include modules/bannertext/bannertext
+      .banner__order
+        include modules/orderbutton/orderbutton
+  section.section.section__howitworcks 
+    .container  
+      include modules/howitworcks/howitworcks
+  section.section.section__stimulation
+    .container
+      include modules/stimulation/stimulation
+  section.section.section__joinform
+    .container
+      include modules/joinform/joinform
+block footer
+  .container
+    include  _layouts/footer/footer

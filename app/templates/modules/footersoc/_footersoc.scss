@@ -1,0 +1,40 @@
+.footersoc{
+    &__items{
+        display:flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    &__li{
+        list-style: none;
+    }
+    &__link{
+        text-decoration: none;
+        color: #000;
+        transition: color .3s;
+        &:hover, &:focus, &:active{
+           color: #f1cb25;
+        }
+    }
+    &__icon{
+        width:40px;
+        height: 40px;
+        background: #f7f7f7;
+        border-radius: 100%;
+        background-image: url("../images/sprite.png"); 
+        margin-right: 10px;
+        display: inline-block;
+        margin-bottom: -12px;
+        &-whatsapp{
+            background-position: 160px;
+        }
+        &-email{
+            background-position: 120px;
+        }
+        &-vk{
+            background-position: 80px;
+        }
+        &-instagram{
+            background-position: 40px;
+        }
+    }
+}

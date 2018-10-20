@@ -1,0 +1,17 @@
+.orderbutton{
+    display: block;
+    width: 380px;
+    padding: 25px;
+    text-align:center;
+    color: #000;
+    background: #fbd429;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font:18px MullerBold, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin-top: 118px;
+    &:hover, &:active, &:focus{
+         color: #000;
+    }
+}

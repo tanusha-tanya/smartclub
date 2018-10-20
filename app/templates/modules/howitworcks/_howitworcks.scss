@@ -1,0 +1,44 @@
+.howitworcks{
+    &__h2{
+        font: 46px MullerBold, sans-serif;
+        text-align: center;
+        margin: 0;
+        &::after{
+           content: " ";
+           display:block;
+           width: 130px;
+           height: 4px;
+           background: #a0a0a0; 
+           margin: 30px auto;
+           position: relative;
+        }
+    }
+    &__items{
+        margin-top: 40px;
+    }
+    &__item{
+        display: flex;
+        list-style: none;
+        counter-increment: list;
+        align-items: center;
+        background: #fff;
+        margin: 26px 0;
+        margin-left: 50px;
+        font: 20px MullerRegular, sans-serif;
+        border-radius: 12px;
+        &:before {
+            content: counter(list) " ";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background: #f1cb25;
+            font: 60px MullerBold, sans-serif;
+            flex-shrink: 0;
+            margin-left: -50px; 
+            margin-right: 35px;           
+        }
+    }
+}

@@ -1,0 +1,44 @@
+.header{
+    &__top{
+        @media(min-width: 1024px){
+            display: flex;
+            margin: 0 -15px;
+            padding: 20px 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media(min-width: 1300px){
+            margin: 0 -20px;
+        }
+    }
+    &__logo{
+        @media(min-width:1024px){
+            margin: 0 15px;
+            width: calc(100%/8 - 30px);
+        }
+        @media(min-width:1300px){
+            margin: 0 20px;
+            width: calc(100%/8 - 40px);
+        }
+    }
+    &__topmenu{
+        @media(min-width:1024px){
+            margin: 0 15px;
+            width: calc(62% - 30px);
+        }
+        @media(min-width:1300px){
+            margin: 0 20px;
+            width: calc(62% - 40px);
+        }
+    }
+    &__registrationbutton{
+        @media(min-width:1024px){
+            margin: 0 15px;
+            width: calc(25% - 30px);
+        }
+        @media(min-width:1300px){
+            margin: 0 20px;
+            width: calc(25% - 40px);
+        }
+    }
+}
