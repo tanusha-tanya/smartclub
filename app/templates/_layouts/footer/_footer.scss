@@ -23,4 +23,25 @@
         text-align: right;
         margin-bottom: 60px;
     }
+    &-left{
+        .footer__h2{
+            font: 46px MullerBold, sans-serif;
+            margin: 0;
+            padding-bottom: 64px;
+            text-align: left;
+            &::after{
+            content: " ";
+            display:block;
+            width: 130px;
+            height: 4px;
+            background: #a0a0a0; 
+            margin: 30px 0;
+            position:static;
+            }            
+        }
+        .footer__description{
+                text-align:left;
+            }
+    }
+
 }

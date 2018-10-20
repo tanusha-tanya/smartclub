@@ -1,0 +1,53 @@
+.userhowitworcks{
+    &__h2{
+        font: 46px MullerBold, sans-serif;
+        margin: 0;
+        text-align: center;
+        &::after{
+           content: " ";
+           display:block;
+           width: 130px;
+           height: 4px;
+           background: #a0a0a0; 
+           margin: 30px auto;
+           position: relative;
+        }
+    }
+    &__items{
+        display:flex;
+        margin: 30px -20px;
+    }
+    &__item{
+        background: #fff;
+        padding: 37px 27px 37px 70px;
+        position:relative;
+        box-sizing: border-box;
+        width: calc(33% - 80px);
+        margin: 0 40px;
+
+    }
+    &__img{
+        position:absolute;
+        left: -40px;
+        top: 20px;
+    }
+    &__button{
+        display: block;
+        width: 380px;
+        padding: 25px;
+        text-align:center;
+        color: #000;
+        background: #fbd429;
+        border-radius: 12px;
+        text-transform: uppercase;
+        font:18px MullerBold, sans-serif;
+        text-decoration: none;
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 65px;
+        &:hover, &:active, &:focus{
+            color: #000;
+        }
+    }
+}

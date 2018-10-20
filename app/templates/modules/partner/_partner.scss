@@ -1,0 +1,47 @@
+.partner{
+    padding: 70px 0;
+    &__h2{
+        font: 46px MullerBold, sans-serif;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        &::after{
+           content: " ";
+           display:block;
+           width: 130px;
+           height: 4px;
+           background: #a0a0a0; 
+           margin: 30px auto;
+           position:relative;
+        }
+    } 
+    &__carousel{
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+    &__item{
+        display: inline-block;
+        margin: 0 20px;
+    }
+    &__arrows{
+        position:absolute;
+        left:0;
+        right:0;
+        top: calc(50% - 25px);
+        width:100%;
+    }
+    &__arrow-left, &__arrow-right{
+        position:absolute;
+        width: 27px;
+        height: 50px;
+        background: url("../images/arrow.png");
+    }
+    &__arrow-left{
+        left:0;
+    }
+    &__arrow-right{
+        right:0;
+        transform:rotate(180deg);
+    }
+}

@@ -1,0 +1,27 @@
+extends _layouts/default
+
+block title
+  title Smartclub
+block header
+  include  _layouts/header/header
+block content
+    section.section.main__banner.main__banner-light    
+        .container
+            .banner__text.banner__text-user
+                include modules/usertext/usertext
+            img.banner__img(src="assets/pick.png")(alt="")
+    section.section.section__howitworcks
+        .container  
+            include modules/userhowitworcks/userhowitworcks
+    section.section.section__pluses
+        .container
+            include modules/pluses/pluses
+    section.section.section__about
+        .container
+            include modules/about/about
+    section.section.section__partner
+        .container
+            include modules/partner/partner
+block footer
+    .container
+        include  _layouts/footer-left/footer-left

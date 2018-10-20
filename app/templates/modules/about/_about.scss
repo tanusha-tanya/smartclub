@@ -1,0 +1,29 @@
+.about{
+    &__h2{
+        font: 46px MullerBold, sans-serif;
+        margin: 0;
+        text-align: center;
+        &::after{
+           content: " ";
+           display:block;
+           width: 130px;
+           height: 4px;
+           background: #a0a0a0; 
+           margin: 30px auto;
+           position: relative;
+        }
+    }
+    &__about{
+        display:flex;
+    }
+    &__text{
+        padding: 60px 200px 60px 40px;
+        background: #f7f7f7;
+        position: relative;
+        margin-right: 180px;
+    }
+    &__img{
+        position: absolute;
+        right: 0;
+    }
+}
