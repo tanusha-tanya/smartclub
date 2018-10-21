@@ -1,0 +1,34 @@
+.bonuses__row{
+    display:flex;
+    margin: 0 -20px;
+}
+.bonuses__item{
+    width:calc(25% - 40px);
+    margin: 20px;
+    background: #fff; 
+    padding: 25px;
+    box-sizing: border-box;   
+    border-radius: 12px;
+    position: relative;
+    margin-right: 60px;
+    min-height: 160px;
+}
+.bonuses__img{
+    position:absolute;
+    right: -60px;
+    top: 40px;
+}
+.bonuses__item-proposle{
+    border: 1px #f1cb25 solid;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+.bonuses__item-total{
+    border: 1px #f1cb25 solid;  
+    margin-right: 20px;  
+    .bonuses__title{
+        font: 30px MullerBold, sans-serif; 
+        padding-bottom: 30px;
+        border-bottom: 1px #f1cb25 solid; 
+    }
+}

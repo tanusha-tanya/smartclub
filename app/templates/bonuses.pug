@@ -1,0 +1,14 @@
+extends _layouts/default
+
+block title
+  title  Текущий баланс бонусов
+block header
+  include  _layouts/header-lk/header-lk
+block content
+    section 
+        .container.main__banner-lk
+            h1.lk__h1 Текущий баланс бонусов
+    section.lk__mewsblock
+      .container
+          include  modules/bonuses/bonuses
+    include  modules/more/more

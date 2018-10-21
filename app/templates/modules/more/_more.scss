@@ -1,0 +1,22 @@
+.more{
+    margin: 40px 0;
+}
+.more__link{
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    width: 380px;
+    padding: 25px;
+    text-align:center;
+    color: #000;
+    background: #fbd429;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font:18px MullerBold, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    &:hover, &:active, &:focus{
+         color: #000;
+    }
+
+}

@@ -1,0 +1,27 @@
+.header__topmenu-lk{
+    display:flex;
+    justify-content: flex-end;
+    .topmenu{
+        margin-left:40px;
+    }
+}
+.exit{
+    margin-left:40px;
+    font:16px MullerBold, sans-serif;
+    text-transform: uppercase;
+    transition: color .3s;
+    text-decoration: none;
+    cursor: pointer;
+    color:#000;
+    &-active, &:hover, &:active, &:focus{
+        color:#f1cb25;
+    }
+    &:visited{
+         color: #000;
+    }
+}
+.lk__h1{
+        text-align:center;
+        position: relative;
+        margin: 0 auto;
+}
