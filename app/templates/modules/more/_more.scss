@@ -5,7 +5,8 @@
     position: relative;
     margin: 0 auto;
     display: block;
-    width: 380px;
+    width:100%;
+    max-width: 380px;
     padding: 25px;
     text-align:center;
     color: #000;
@@ -18,5 +19,20 @@
     &:hover, &:active, &:focus{
          color: #000;
     }
-
+}
+.spoiler__item{
+    display:none!important;
+}
+.spoiler__item-open{
+    display:block!important;
+}
+.purchases__row.spoiler__item-open{
+    @media(min-width:$tablet){
+        display:table-row!important;
+    }    
+}
+.bonuses__row.spoiler__item-open{
+      @media(min-width:$tablet){
+        display:flex!important;
+      }
 }

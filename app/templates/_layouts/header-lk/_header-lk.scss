@@ -1,11 +1,13 @@
 .header__topmenu-lk{
     display:flex;
     justify-content: flex-end;
+    align-items: center;
     .topmenu{
         margin-left:40px;
     }
 }
 .exit{
+    display:none;
     margin-left:40px;
     font:16px MullerBold, sans-serif;
     text-transform: uppercase;
@@ -19,9 +21,16 @@
     &:visited{
          color: #000;
     }
+    @media(min-width:$notebook){
+        display:block;
+    }
 }
 .lk__h1{
-        text-align:center;
-        position: relative;
-        margin: 0 auto;
+    text-align:center;
+    position: relative;
+    margin: 0 auto;
+    font: 30px MullerBold, sans-serif;
+    @media(min-width:$notebook){
+        font: 46px MullerBold, sans-serif;
+    }
 }

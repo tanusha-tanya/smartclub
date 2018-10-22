@@ -1,7 +1,12 @@
 .partner{
-    padding: 70px 0;
+     padding: 30px 0;
+     position: relative;
+    @media(min-width:$notebook){
+         padding: 70px 0;
+    }
+   
     &__h2{
-        font: 46px MullerBold, sans-serif;
+        font: 30px MullerBold, sans-serif;
         margin: 0;
         text-align: center;
         position: relative;
@@ -14,11 +19,15 @@
            margin: 30px auto;
            position:relative;
         }
+         @media(min-width:$notebook){
+             font: 46px MullerBold, sans-serif;
+         }
     } 
     &__carousel{
         margin: 0 auto;
         position: relative;
         text-align: center;
+        max-width: 700px;
     }
     &__item{
         display: inline-block;
@@ -28,7 +37,7 @@
         position:absolute;
         left:0;
         right:0;
-        top: calc(50% - 25px);
+        top: calc(50% + 25px);
         width:100%;
     }
     &__arrow-left, &__arrow-right{
@@ -36,6 +45,7 @@
         width: 27px;
         height: 50px;
         background: url("../images/arrow.png");
+        cursor:pointer;
     }
     &__arrow-left{
         left:0;

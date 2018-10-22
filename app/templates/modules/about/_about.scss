@@ -1,6 +1,6 @@
 .about{
     &__h2{
-        font: 46px MullerBold, sans-serif;
+        font: 30px MullerBold, sans-serif;
         margin: 0;
         text-align: center;
         &::after{
@@ -12,18 +12,36 @@
            margin: 30px auto;
            position: relative;
         }
+        @media(min-width:$notebook){
+            font: 46px MullerBold, sans-serif;
+        }
     }
     &__about{
-        display:flex;
+        @media(min-width:$notebook){
+             display:flex;
+        }
     }
     &__text{
-        padding: 60px 200px 60px 40px;
         background: #f7f7f7;
-        position: relative;
-        margin-right: 180px;
+        padding: 20px;
+        margin: 0 -15px;
+        @media(min-width:$notebook){
+            padding: 60px 200px 60px 40px;
+            background: #f7f7f7;
+            position: relative;
+            margin: 0;
+            margin-right: 180px;
+         }
     }
     &__img{
-        position: absolute;
-        right: 0;
+        width: 50%;
+        position: relative;
+        margin: 10px auto;
+        display: block;
+        @media(min-width:$notebook){
+            width: auto;
+            position: absolute;
+            right: 0;
+        }
     }
 }

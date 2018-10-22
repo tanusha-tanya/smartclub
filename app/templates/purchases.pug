@@ -1,0 +1,14 @@
+extends _layouts/default
+
+block title
+  title  История покупок
+block header
+  include  _layouts/header-lk/header-lk
+block content
+    section 
+        .container.main__banner-lk
+            h1.lk__h1 История покупок
+    section.lk__mewsblock.spoiler
+      .container
+          include  modules/purchases/purchases
+    include  modules/more/more

@@ -10,14 +10,21 @@
     color:#000;
     transition: color .3s;
     text-transform: uppercase;
-    text-decoration: none;
-    &:hover, &:active, &:focus{
+    position: relative;
+    margin: 20px auto;
+    a{
+        color:#000;
+        text-decoration: none;
+        &:hover, &:active, &:focus{
           color:#f1cb25;
     }
-    &:visited{
-            color: #000;
+        &:visited{
+                color: #000;
+        }
     }
-    @media(min-width: 1300px){
+    
+    @media(min-width: $desctop){
+        margin: 0;
         font:18px MullerBold, sans-serif; 
     }
 }

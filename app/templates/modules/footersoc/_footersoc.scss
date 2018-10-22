@@ -1,8 +1,14 @@
 .footersoc{
     &__items{
-        display:flex;
-        justify-content: space-between;
         padding: 0;
+        @media(min-width:640px){
+            display:flex;                    
+            flex-wrap:wrap;
+        }
+         @media(min-width:$notebook){
+             justify-content: space-between;
+             flex-wrap:nowrap;
+         }
     }
     &__li{
         list-style: none;
@@ -11,9 +17,17 @@
         text-decoration: none;
         color: #000;
         transition: color .3s;
+        font: 16px MullerRegular, sans-serif;
         &:hover, &:focus, &:active{
            color: #f1cb25;
         }
+         @media(min-width:640px){
+           margin: 10px 20px;
+        }
+         @media(min-width:$notebook){
+            font: 20px MullerRegular, sans-serif;
+             margin: 0;
+         }
     }
     &__icon{
         width:40px;

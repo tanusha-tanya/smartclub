@@ -1,6 +1,6 @@
 .usertext{
     &__h1{
-        font: 46px MullerBold, sans-serif;
+        font: 30px MullerBold, sans-serif;
         margin: 0;
         &::after{
            content: " ";
@@ -10,15 +10,27 @@
            background: #a0a0a0; 
            margin: 30px 0;
         }
+        @media(min-width: $notebook){
+            font: 46px MullerBold, sans-serif;
+        }
     }
     &__p{
-        font: 30px MullerRegular, sans-serif;
+        font: 20px MullerRegular, sans-serif;
         max-width: 540px;
-        margin-bottom: 120px;
+        @media(min-width: $notebook){
+             margin-bottom: 120px;
+            font: 30px MullerBold, sans-serif;
+        }
     }
     &__download{
         display: flex;
         justify-content: space-between;
         max-width: 540px;
+    }
+    &__link{
+        width: calc(50% - 10px);
+    }
+    &__img{
+        width: 100%;
     }
 }

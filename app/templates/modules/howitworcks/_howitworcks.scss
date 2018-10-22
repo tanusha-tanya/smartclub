@@ -1,6 +1,6 @@
 .howitworcks{
     &__h2{
-        font: 46px MullerBold, sans-serif;
+        font: 30px MullerBold, sans-serif;
         text-align: center;
         margin: 0;
         &::after{
@@ -12,8 +12,12 @@
            margin: 30px auto;
            position: relative;
         }
+    @media(min-width:$notebook){
+        font: 46px MullerBold, sans-serif;
+    }
     }
     &__items{
+        padding: 0;
         margin-top: 40px;
     }
     &__item{
@@ -22,23 +26,47 @@
         counter-increment: list;
         align-items: center;
         background: #fff;
-        margin: 26px 0;
-        margin-left: 50px;
-        font: 20px MullerRegular, sans-serif;
+        margin: 26px 0;       
         border-radius: 12px;
+        position: relative;
+        padding: 20px; 
         &:before {
             content: counter(list) " ";
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 100px;
-            height: 100px;
+            width: 30px;
+            height: 30px;
             border-radius: 100%;
             background: #f1cb25;
+            font: 30px MullerBold, sans-serif;
+            position: absolute;   
+            top: 10px;
+            left: 10px;   
+        }
+        span{
+            text-indent: 50px;
+            text-align:justify;
+        }
+         @media(min-width:$notebook){
+         margin-left: 50px;
+        font: 20px MullerRegular, sans-serif;
+        width: 1140px;
+        box-sizing: border-box;
+        &:before {
+            width: 100px;
+            height: 100px;          
             font: 60px MullerBold, sans-serif;
             flex-shrink: 0;
             margin-left: -50px; 
-            margin-right: 35px;           
+            margin-right: 35px;   
+            position: static;    
+            padding: 0;    
+        }
+        span{
+            text-indent:0;
         }
     }
+    }
+   
 }

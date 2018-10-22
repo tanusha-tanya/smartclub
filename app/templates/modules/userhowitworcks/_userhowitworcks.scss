@@ -1,6 +1,6 @@
 .userhowitworcks{
     &__h2{
-        font: 46px MullerBold, sans-serif;
+        font: 30px MullerBold, sans-serif;
         margin: 0;
         text-align: center;
         &::after{
@@ -12,19 +12,27 @@
            margin: 30px auto;
            position: relative;
         }
+        @media(min-width: $notebook){
+            font: 46px MullerBold, sans-serif;
+        }
     }
     &__items{
-        display:flex;
-        margin: 30px -20px;
+        @media(min-width: $notebook){
+            display:flex;
+            margin: 30px -20px;
+        }
     }
     &__item{
         background: #fff;
         padding: 37px 27px 37px 70px;
         position:relative;
         box-sizing: border-box;
-        width: calc(33% - 80px);
-        margin: 0 40px;
-
+        margin: 20px;
+        margin-left:30px;
+        @media(min-width: $notebook){
+            width: calc(33% - 80px);
+            margin: 0 40px;
+        }
     }
     &__img{
         position:absolute;
@@ -33,7 +41,8 @@
     }
     &__button{
         display: block;
-        width: 380px;
+        max-width: 380px;
+        width: 100%;
         padding: 25px;
         text-align:center;
         color: #000;

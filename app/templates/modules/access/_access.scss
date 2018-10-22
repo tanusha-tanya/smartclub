@@ -1,0 +1,60 @@
+.mfp-content{
+    padding: 40px 80px;
+    background: #f7f7f7;
+    width: 100%;
+    max-width: 586px;
+    box-sizing:border-box;
+}
+.access{
+    text-align: center;
+    &__title{
+        font:30px MullerBold, sans-serif;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E8E8E8;
+        margin-bottom: 25px;
+    }
+    &__span{
+        font:24px MullerRegular, sans-serif;
+    }
+    &__form{
+        position: relative;
+        margin: 0 auto;
+    }
+    &__label{
+        width:100%;
+        max-width:290px;
+        display:block;
+        position: relative;
+        margin: 25px auto;
+    }
+    &__input{
+        width:100%;
+        max-width:290px;
+        display:block;
+        padding:20px 18px;
+        border-radius: 12px;
+        box-sizing:border-box;
+        background: #fff;
+        border: 1px solid transparent;
+        transition: border-color .3s;
+        &:hover, &:focus{
+            border-color: #f1cb25;
+            outline:none;
+        }
+        &-submit{
+            background:#f1cb25;
+           font:18px MullerBold, sans-serif;
+           text-transform: uppercase;
+        }
+    }
+    &__back{
+        color:#a0a0a0;
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
+    &__link a{
+        color:#a0a0a0;
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
+}

@@ -1,5 +1,6 @@
 @import
   'normalize',
+  'breakpoints',
   'typography',
   'common',
   '../templates/_layouts/header/header',
@@ -23,4 +24,7 @@
   '../templates/modules/lk-menu/lk-menu',
   '../templates/modules/news/news',
   '../templates/modules/more/more',
-  '../templates/modules/bonuses/bonuses'
+  '../templates/modules/bonuses/bonuses',
+  '../templates/modules/purchases/purchases',
+  '../templates/modules/map/map',
+  '../templates/modules/access/access'

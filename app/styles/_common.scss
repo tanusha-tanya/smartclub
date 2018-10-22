@@ -5,19 +5,20 @@ body{
     overflow-x:hidden;
     font: 18px MullerRegular, sans-serif;
     line-height: 1.5;
-    @media(min-width: 1300px){
+    @media(min-width: $desctop){
         font: 20px MullerRegular, sans-serif;
     }
+}
+.section{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
 }
 .container{
     position:relative;
     margin: 0 auto;
     padding: 0 15px;
-    @media(min-width: 1024px){
-        width: 850px;
-        padding: 0;
-    }
-    @media(min-width: 1300px){
+    @media(min-width: $notebook){
         width: 1260px;
         padding: 0;
     }
@@ -25,8 +26,8 @@ body{
 .main__banner{    
     background-position:center;    
     width: 100%;
-    height: 80vh;
-    padding-top: 170px;
+    box-sizing:border-box;    
+    padding: 30px 0;
     &-dark{
         background-image: url("../images/bg_dark.jpg");
         background-attachment: fixed;
@@ -36,42 +37,88 @@ body{
         background-image: url("../images/bg_light.png");
         background-size:contain;
     }
+    @media(min-width:$notebook){
+       padding-top: 170px;
+       min-height: 80vh;
+    }
 }
 
 .banner__text{
-    @media(min-width:1024px){
+    @media(min-width:$notebook){
         width: 50%;
     }
 }
 .banner__img{
+    width: 50%;
+    @media(min-width:$notebook){
     position: absolute;
+    z-index:100;
     right: -7%;
     width: 50%;
     top: -20px;
+    bottom:auto;
+     }
 }
 .section__howitworcks{
     background: #f7f7f7;
-    margin-top:80px;
-    padding: 70px 50px;
+    margin-top:30px;
+    padding: 30px 0;    
+    @media(min-width:$notebook){
+        margin-top:80px;
+        padding: 70px 50px;
+    }    
 }
 .section__stimulation{
     background-image: url("../images/hand.png");
-    background-position: 250% center;
+    background-position: bottom;
+    background-size:contain;
     background-repeat: no-repeat;
-    padding: 70px 0;
+    padding: 30px 0;
+    padding-bottom: 150px;
+    @media(min-width:400px){
+        padding-bottom: 200px;
+    }
+    @media(min-width:640px){
+        padding-bottom: 300px;
+    }
+    @media(min-width:700px){
+        padding-bottom: 400px;
+    }
+    @media(min-width:800px){
+        padding-bottom: 450px;
+    }
+     @media(min-width:900px){
+        padding-bottom: 500px;
+    }
+    @media(min-width:$notebook){
+        padding: 70px 0;
+        background-size: auto;
+        background-position: 250% center;
+    }
+    
 }
 .section__joinform{
     background: #f7f7f7;
-    padding: 70px 0;
+    padding: 30px 0;
+    @media(min-width:$notebook){
+        padding: 70px 0;
+    }
 }
 .main__banner-lk{
     background: url("../images/bg_lk.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    padding: 70px 0;
+    padding: 30px 0;
+     @media(min-width:$notebook){
+        padding: 70px 0;
+    }
+
 }
 .lk__mewsblock{
     background: #f7f7f7;
-    padding: 40px 0;
+    padding: 20px 0;
+    @media(min-width:$notebook){
+        padding: 40px 0;
+    }
 }

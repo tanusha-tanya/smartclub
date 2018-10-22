@@ -1,17 +1,26 @@
 .orderbutton{
     display: block;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
+    box-sizing:border-box;
     padding: 25px;
     text-align:center;
     color: #000;
     background: #fbd429;
     border-radius: 12px;
     text-transform: uppercase;
-    font:18px MullerBold, sans-serif;
+    font:16px MullerBold, sans-serif;
     text-decoration: none;
     box-sizing: border-box;
-    margin-top: 118px;
+    position:relative;
+    margin: 20px auto;
+    margin-top: 50px;
     &:hover, &:active, &:focus{
          color: #000;
+    }
+    @media(min-width:$notebook){
+        margin: 0;
+        margin-top: 118px;
+        font:18px MullerBold, sans-serif;
     }
 }

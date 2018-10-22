@@ -1,7 +1,7 @@
 .bannertext{
     color: #fff;
     &__h1{
-        font: 46px MullerRegular, sans-serif;
+        font: 30px MullerRegular, sans-serif;
         margin: 0;
         &::after{
            content: " ";
@@ -11,9 +11,14 @@
            background: #a0a0a0; 
            margin: 30px 0;
         }
+        @media(min-width:$notebook){
+            font: 46px MullerRegular, sans-serif;
+        }
     }
     &__p{
-        font: 30px MullerRegular, sans-serif;
-        line-height: 1.5;
+        @media(min-width:$notebook){
+            font: 30px MullerRegular, sans-serif;
+            line-height: 1.5;
+        }
     }
 } 

@@ -1,6 +1,6 @@
 .stimulation{
    &__h2{
-        font: 46px MullerBold, sans-serif;
+        font: 30px MullerBold, sans-serif;
         text-align: center;
         margin: 0;
         &::after{
@@ -12,19 +12,26 @@
            margin: 30px auto;
            position: relative;
         }
-   }
-    &__descript{
-      font: 30px MullerRegular, sans-serif;  
-      text-align: center;
+    @media(min-width:$notebook){
+        font: 46px MullerBold, sans-serif;
     }
-    &__items{
-        width: 50%;
-        margin-top: 70px;
+   }
+    &__descript{      
+      text-align: center;
+       @media(min-width:$notebook){
+        font: 30px MullerRegular, sans-serif;  
+     }
+    }
+    &__items{       
         padding: 0;
+        @media(min-width:$notebook){
+             width: 50%;
+             margin-top: 70px;
+         }
     }
     &__li{
         margin-bottom: 32px;
-        font: 20px MullerRegular, sans-serif; 
+        font: 18px MullerRegular, sans-serif; 
         list-style: none;
         text-indent: 20px;
         position: relative;
@@ -40,7 +47,13 @@
             border-radius: 100%;
         }
         strong{
+            font: 18px MullerBold, sans-serif; 
+             @media(min-width:$notebook){
             font: 20px MullerBold, sans-serif; 
+             }
         }
+         @media(min-width:$notebook){
+             font: 20px MullerRegular, sans-serif; 
+         }
     }
 }

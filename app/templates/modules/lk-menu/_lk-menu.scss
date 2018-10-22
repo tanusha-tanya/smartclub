@@ -1,4 +1,5 @@
 .lkmenu{
+    display:none;
     margin-left: 40px;
     &__ul{
         padding: 0;
@@ -27,5 +28,8 @@
         @media(min-width: 1300px){
             font:18px MullerBold, sans-serif;
         }
+    }
+    @media(min-width:$notebook){
+        display:block;
     }
 }

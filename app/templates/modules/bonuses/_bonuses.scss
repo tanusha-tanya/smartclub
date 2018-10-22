@@ -1,9 +1,14 @@
-.bonuses__row{
-    display:flex;
-    margin: 0 -20px;
+.bonuses__row{    
+    @media(min-width:$tablet){
+        display:flex;
+        margin: 0 -20px;
+        flex-wrap:wrap;
+    }
+    @media(min-width:$notebook){
+        flex-wrap:nowrap;
+    }
 }
-.bonuses__item{
-    width:calc(25% - 40px);
+.bonuses__item{   
     margin: 20px;
     background: #fff; 
     padding: 25px;
@@ -16,7 +21,15 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    box-sizing: border-box;
+    @media(min-width:$tablet){
+       width:calc(50% - 80px);
+    }
+    @media(min-width:$notebook){
+         width:calc(25% - 60px);
+    }
 }
+
 .bonuses__img{
     position:absolute;
     right: -60px;
