@@ -19,6 +19,7 @@
     &__form{
         @media(min-width:$notebook){
             display: flex;
+            flex-wrap: wrap;
             margin: 0 -20px;
             justify-content: space-between;
         }
@@ -60,5 +61,17 @@
          @media(min-width:$notebook){
              margin: 0;
          }
+    }
+}
+.joinform__confirm{
+    margin: 20px;
+    a{
+       color: #a0a0a0;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    transition: border .3s;
+    &:hover{
+         border-bottom: none;
+    } 
     }
 }

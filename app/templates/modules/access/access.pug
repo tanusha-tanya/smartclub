@@ -3,11 +3,14 @@
     span.access__span Получение демо-доступа
     form.access__form        
         label.access__label
-            input.access__input.access__input-text(type="text")(placeholder="Ваше имя")
+            input.access__input.access__input-text.access__input-phone(type="text")(placeholder="Ваше имя")
         label.access__label
             input.access__input.access__input-text(type="text")(placeholder="Ваш e-mail")
-        label.access__label
-            input.access__input.access__input-text(type="text")(placeholder="")
+        span.joinform__confirm
+            input.js-confirm(type="checkbox")#confirm
+            label.joinform__label-confirm(for="confirm")
+                span Согласен&nbsp;
+                    a(href="#") на обработку персональных данных
         label.access__label
             input.access__input.access__input-submit(type="submit")(value="Оставить заявку")
     a(href="#").access__back Назад  

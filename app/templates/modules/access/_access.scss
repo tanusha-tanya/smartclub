@@ -1,9 +1,12 @@
 .mfp-content{
-    padding: 40px 80px;
+    padding: 20px;
     background: #f7f7f7;
     width: 100%;
     max-width: 586px;
     box-sizing:border-box;
+    @media(min-width:$tablet){
+        padding: 40px 80px;
+    }
 }
 .access{
     text-align: center;

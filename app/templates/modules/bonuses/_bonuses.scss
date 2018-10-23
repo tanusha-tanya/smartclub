@@ -39,14 +39,28 @@
     border: 1px #f1cb25 solid;
     border-radius: 12px;
     margin-right: 20px;
+    width: calc(100% - 75px);
+    @media(min-width:$tablet){
+         width: calc(50% - 40px);
+    }
+    @media(min-width:$notebook){
+         width:calc(25% - 15px);
+    }
 }
 .bonuses__item-total{
     border: 1px #f1cb25 solid;  
     margin-right: 20px;  
+    width: calc(100% - 75px);
     .bonuses__title{
         font: 27px MullerBold, sans-serif; 
         padding-bottom: 20px;
         border-bottom: 1px #f7f7f7 solid; 
+    }
+    @media(min-width:$tablet){
+          width: calc(50% - 40px);
+    }
+    @media(min-width:$notebook){
+         width:calc(25% - 15px);
     }
 }
 .bonuses__num{

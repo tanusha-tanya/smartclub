@@ -34,11 +34,11 @@
          }
     }
     &__img{
-        width: 50%;
+        display: none;
         position: relative;
         margin: 10px auto;
-        display: block;
         @media(min-width:$notebook){
+            display: block;
             width: auto;
             position: absolute;
             right: 0;

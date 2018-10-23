@@ -28,7 +28,7 @@
     } 
       
         &__img{
-            width:100%;
+            width:50%;
             @media(min-width: $notebook){
                  width:calc(40% - 30px);
             }

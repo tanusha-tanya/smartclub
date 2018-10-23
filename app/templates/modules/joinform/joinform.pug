@@ -6,6 +6,11 @@
         label.joinform__label
             input.joinform__input.joinform__input-text(type="text")(placeholder="Ваш e-mail")
         label.joinform__label
-            input.joinform__input.joinform__input-text(type="text")(placeholder="Ваш телефон")
+            input.joinform__input.joinform__input-text.access__input-phone(type="text")(placeholder="Ваш телефон")
         label.joinform__label
             input.joinform__input.joinform__input-submit(type="submit")(value="Отправить")
+        span.joinform__confirm
+            input.js-confirm(type="checkbox")#confirm
+            label.joinform__label-confirm(for="confirm")
+                span Согласен&nbsp;
+                    a(href="#") на обработку персональных данных
