@@ -95,6 +95,9 @@ body{
         background-size: auto;
         background-position: 250% center;
     }
+	@media(min-width:$desctop){       
+        background-position: 130% center;
+    }
     
 }
 .section__joinform{
