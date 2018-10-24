@@ -3,6 +3,7 @@ $(document).ready(function() {
 		type: 'ajax',
 		alignTop: true,
 		overflowY: 'scroll',
+		closeOnContentClick: false,
 		callbacks: {
 			ajaxContentAdded: function() {
 				$('.access__back').click(function(){
@@ -10,13 +11,14 @@ $(document).ready(function() {
 				});
 				$(this.content).find(".access__input-phone").mask("+7(999) 999-9999");
 			}
-		}	
+		}
 	});
-	
+
   $('.registrationbutton__link a').magnificPopup({
 		type: 'ajax',
 		alignTop: true,
 		overflowY: 'scroll',
+		closeOnContentClick: false,
 			callbacks: {
 				ajaxContentAdded: function() {
 					$(this.content).find(".access__link a").magnificPopup({
@@ -33,6 +35,16 @@ $(document).ready(function() {
 	});
 });
 $(".access__input-phone").mask("+7(999) 999-9999");
+
+function changeButtonIfAgree(button, agree){
+    if (agree.is(':checked')) {
+        button.removeClass('button-disabled');
+        button.attr('disabled', false);
+    } else {
+        button.addClass('button-disabled');
+        button.attr('disabled', true);
+    }
+}
 $('body').on('change','input[type=checkbox].js-confirm',function(){
       changeButtonIfAgree($(this).parents('form').find('input[type=submit]'), $(this));
       changeButtonIfAgree($(this).parents('form').find('button[type=submit]'), $(this));
@@ -49,7 +61,7 @@ $('body').on('change','input[type=checkbox].js-confirm',function(){
     }
   });
 
-  $('body').on('submit','.ajaxform', function(event){
+  $('body').on('submit','form', function(event){
     event.preventDefault();
     let text = $(this).find('input[type=text]');
     text.parent("label").find(".error__text").remove();
@@ -59,5 +71,49 @@ $('body').on('change','input[type=checkbox].js-confirm',function(){
         $(text[i]).parent("label").addClass("error-label");
         $(text[i]).parent("label").append('<div class="error__text">Пожалуйста, заполните поле</div>');
       }
+			else{
+				if($(this).hasClass("registration")){
+					$(this).html('<p>Спасибо, вы авторизованы</p>');
+					$(".access__back").remove();
+					setTimeout(function func() {
+					  window.location = "/news.html"
+					}, 1000)
+				}
+				if($(this).hasClass("enterance")){
+					$(this).html('<p>Спасибо, вы авторизованы</p>');
+					$(".access__link").remove();
+					setTimeout(function func() {
+					  window.location = "/news.html"
+					}, 1000)
+				}
+				if($(this).hasClass("joinform__form")){
+					$(this).html('<p>Спасибо, проверьте вашу почту</p>');
+				}
+				if($(this).hasClass("access__access")){
+					$(this).html('<p>Спасибо, проверьте вашу почту</p>');
+					setTimeout(function func() {
+					  $.magnificPopup.close();
+					}, 1000)
+				}
+				if($(this).hasClass("sendcode")){
+							$.magnificPopup.open({
+								type: 'ajax',
+								alignTop: true,
+								overflowY: 'scroll',
+								closeOnContentClick: false,
+								items: {
+									src: 'recovery.html',
+									type: 'ajax'
+								}
+						})				
+				}
+				if($(this).hasClass("recovery")){
+					$(this).html('<p>Спасибо, вы авторизованы</p>');
+					$(".access__link").remove();
+					setTimeout(function func() {
+					  window.location = "/news.html"
+					}, 1000)
+				}
+			}
     };
   });

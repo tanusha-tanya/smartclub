@@ -9,7 +9,7 @@
            display:block;
            width: 130px;
            height: 4px;
-           background: #a0a0a0; 
+           background: #a0a0a0;
            margin: 30px 0;
         }
         @media(min-width:$notebook){
@@ -28,7 +28,7 @@
         position:relative;
         margin: 20px auto;
         width: 100%;
-        max-width: 380px;        
+        max-width: 380px;
         @media(min-width:$notebook){
             width: calc(25% - 40px);
             margin: 0 20px;
@@ -42,16 +42,16 @@
         box-sizing: border-box;
         padding: 15px 16px;
         border-radius: 12px;
-        &-text{            
+        &-text{
             border: 1px solid #fff;
-            background: #fff;            
+            background: #fff;
             transition: border .3s;
             color:#a0a0a0;
             &:hover, &:focus{
                 border: 1px solid #f1cb25;
                 color: #000;
                 outline: none;
-            }        
+            }
         }
         &-submit{
             font: 20px MullerBold, sans-serif;
@@ -66,12 +66,75 @@
 .joinform__confirm{
     margin: 20px;
     a{
-       color: #a0a0a0;
-    text-decoration: none;
-    border-bottom: 1px solid;
-    transition: border .3s;
-    &:hover{
-         border-bottom: none;
-    } 
+		color: #a0a0a0;
+		text-decoration: none;
+		border-bottom: 1px solid;
+		transition: border .3s;
+	}
+  &:hover{
+     border-bottom: none;
+     .joinform__label-confirm{
+       &:before{
+         border: 1px solid #f1cb25;
+       }
+     }
+  }
+  .joinform__label-confirm{
+      display: flex;
+      align-content: flex-start;
+  }
+
+	.js-confirm{
+		visibility:hidden;
+		position: absolute;
+		&+ label{
+			cursor: pointer;
+      position: relative;
+			&:before{
+				content: "";
+				width: 20px;
+				height: 20px;
+				border-radius: 3px;
+				display: block;
+				background: #fff;
+				transition: border .3s;
+				border: 1px solid #999;
+        margin-right: 20px;
+			}
+		}
+    &:checked{
+      &+ label{
+        &:after{
+          content: "";
+          width: 15px;
+          height: 10px;
+          border-top: 2px solid #f1cb25;
+          border-right: 2px solid #f1cb25;
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          transform: rotate(130deg) skewX(-3deg);
+        }
+      }
     }
+	}
+}
+.access{
+  .js-confirm{
+		&+ label{
+			&:before{
+				width: 24px;
+				height: 20px;
+        margin-right: 10px;
+			}
+		}
+  }
+}
+.error-label{
+  input{
+    border-color: red;
+  }  
+}
+.error__text{
+    color: red;
 }

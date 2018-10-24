@@ -1,18 +1,13 @@
 .access
     .access__title Присоединяйся к Smart Club, начинай зарабатывать!
     span.access__span Восстановление пароля
-    form.access__form        
+    form.access__form.recovery
         label.access__label
-            input.access__input.access__input-text.access__input-phone(type="text")(placeholder="Номер телефона")
+          input.access__input.access__input-text(type="text")(placeholder="Введите код")
         label.access__label
             input.access__input.access__input-text(type="text")(placeholder="Пароль")
         label.access__label
             input.access__input.access__input-text(type="text")(placeholder="Повторите пароль")
-        span.joinform__confirm
-            input.js-confirm(type="checkbox")#confirm
-            label.joinform__label-confirm(for="confirm")
-                span Согласен&nbsp;
-                    a(href="#") на обработку персональных данных
         label.access__label
             input.access__input.access__input-submit(type="submit")(value="Восстановить")
-    a(href="#").access__back Назад        
+    a(href="#").access__back Назад

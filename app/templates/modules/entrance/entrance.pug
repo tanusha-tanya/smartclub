@@ -1,18 +1,13 @@
 .access
     .access__title Присоединяйся к Smart Club, начинай зарабатывать!
     span.access__span Введите данные для входа
-    form.access__form        
+    form.access__form.enterance
         label.access__label
             input.access__input.access__input-text.access__input-phone(type="text")(placeholder="Номер телефона")
         label.access__label
             input.access__input.access__input-text(type="text")(placeholder="Пароль")
-        span.joinform__confirm
-            input.js-confirm(type="checkbox")#confirm
-            label.joinform__label-confirm(for="confirm")
-                span Согласен&nbsp;
-                    a(href="#") на обработку персональных данных
         label.access__label
             input.access__input.access__input-submit(type="submit")(value="Войти")
     .access__link
-        a(href="recovery.html") Забыли пароль?  
-        a(href="registration.html") Регистрация 
+        a(href="sendcode.html") Забыли пароль?
+        a(href="registration.html") Регистрация
