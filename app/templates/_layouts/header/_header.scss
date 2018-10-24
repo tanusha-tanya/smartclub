@@ -8,6 +8,7 @@
         }
         @media(min-width: $notebook){            
             margin: 0 -15px;
+            transition: padding .3s;
             padding: 20px 0;            
         }
         @media(min-width: $desctop){
@@ -16,6 +17,7 @@
     }
     &__logo{
         @media(min-width:$notebook){
+            transition: width .3s;
             margin: 0 15px;
             width: calc(100%/8 - 30px);
         }
@@ -48,4 +50,21 @@
             width: calc(25% - 40px);
         }
     }
+    &.fixed{
+        width:100%;
+        z-index:999;
+        position:fixed;
+        background: #fff;        
+        .header__top{
+            padding:0;
+        }
+        img{
+            width:50px;
+        }
+        .topmenu__link, .registrationbutton__link,.lkmenu__link, .exit{
+        font: 14px MullerBold, sans-serif;
+    }
+    }
+    
+        
 }
